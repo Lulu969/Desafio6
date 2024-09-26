@@ -1,0 +1,39 @@
+% Definir la matriz A del sistema
+A = [2, 3, 1;
+     4, 6.0001, 2;
+     3, 1, 2];
+
+% Definir el vector de términos independientes b
+b = [1; 2; 3];
+
+% Calcular el determinante de la matriz A
+det_A = det(A);
+
+% Calcular la matriz identidad
+I = eye(3);
+
+% Resolver el sistema
+x = A\b;
+
+% Calcular la norma de A
+norm_A = norm(A);
+
+% Calcular la inversa de la matriz A
+A_inv = inv(A);
+
+% Calcular la norma de A_inv
+norm_A_inv = norm(A_inv);
+
+% Calcular el número de condición de A
+cond_A = norm_A * norm_A_inv;
+
+% Mostrar resultados
+disp('Determinante de A:');
+disp(det_A);
+
+disp('Número de condición de A:');
+disp(cond_A);
+
+disp('Solución del sistema:');
+disp(x);
+
